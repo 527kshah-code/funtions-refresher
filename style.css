@@ -68,3 +68,9 @@ main {
   color: #fff;
 }
 #btnClear:hover { background-color: #991b1b; }
+
+#btnAngry {
+  background-color: #b6350b;
+  border-color: #491e12;
+  color: white;
+}

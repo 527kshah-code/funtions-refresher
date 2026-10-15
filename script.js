@@ -12,6 +12,14 @@ function render (html) {
 */
 function greet () {
   // TODO: Write your code here
+  const userName = prompt("What is your name?");
+  if(!userName || !userName.trim()) {
+    //check for empty or cancelled input
+    render("<p class='text-muted'> No name entered. </p>");
+    return; //exit the function early
+  } else {
+    render (`<p> Hello ${userName} </p>`);
+  }
 }
 
 /* 
@@ -24,6 +32,27 @@ function greet () {
 */
 function averageNumbers () {
   // TODO: Write your code here
+  const nums = prompt("Enter a list of numbers, separated by commas:");
+  
+  if (!nums) {
+    render("<p class='text-muted'> No numbers entered. </p>");
+    return;
+  }
+
+  const numArray = nums.split(',')
+                       .map(n => parseFloat(n.trim()))
+                       .filter(n => !isNaN(n)); // removes invalid numbers
+
+const sum = numArray.reduce((a,b) => a + b, 0);
+
+const avg = sum / numArray.length;
+
+const list = numArray.map(n => `<li class = "list-group-item"> ${n} </li>`).join('');
+
+render(
+  `<p> Average: <strong> ${avg} </strong></p>
+  <ul class="list-group">${list}</ul>`
+)
 }
 
 /* 
@@ -35,6 +64,20 @@ function averageNumbers () {
 */
 function timeOfDay () {
   // TODO: Write your code here
+  const h = new Date().getHours()
+
+  let msg = ''
+
+  if (h < 12) {
+    msg = 'Good Morning!'
+  } else if (h >= 12 && h < 15) {
+    msg = 'Good Afternoon!'
+  } else if (h > 15 && h < 18) {
+    msg = 'Good Evening!'
+  } else{
+    msg = 'Good Night!'
+  }
+  render(`<p>${msg}</p>`)
 }
 
 /* 
@@ -57,6 +100,7 @@ function randomBetween () {
 */
 function clearOutput () {
   // TODO: Write your code here
+  render("<p class='text-muted'> Output cleared. </p>")
 }
 
 // ---- Event listeners for the demo buttons ----
@@ -75,8 +119,24 @@ document.getElementById('btnClear').addEventListener('click', clearOutput)
   1) Change the page title text to something new.
   2) Each time you press the button, the output text color cycles through a few choices (red, green, orange, etc.).
   3) Press the button to change the background color of the output box to a random color.
-  4) Ask the user for a number and display that number doubled.
+  4) Make a button the make it Angry mode.
   
   Write each function below, and don’t forget to connect each one 
   to a new button in index.html using addEventListener.
 */
+
+function changeTitle() {
+
+}
+
+function cycleTextColor() {
+  
+}
+
+function randomBackgroundColor() {
+
+}
+
+function angryMode() {
+
+}
