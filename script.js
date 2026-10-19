@@ -109,6 +109,12 @@ document.getElementById('btnAvg').addEventListener('click', averageNumbers)
 document.getElementById('btnTime').addEventListener('click', timeOfDay)
 document.getElementById('btnRandom').addEventListener('click', randomBetween)
 document.getElementById('btnClear').addEventListener('click', clearOutput)
+document.getElementById('btnCycleText').addEventListener('click', cycleTextColor)
+document.getElementById('btnRandomBg').addEventListener('click', randomBackgroundColor)
+document.getElementById('btnAngry').addEventListener('click', angryMode)
+document.getElementById('btnChangeTitle').addEventListener('click', changeTitle)
+
+
 
 /* 
   ------------------------------------------
@@ -126,7 +132,7 @@ document.getElementById('btnClear').addEventListener('click', clearOutput)
 */
 
 function changeTitle() {
-
+  document.title= "My New Page Title";
 }
 
 function cycleTextColor() {

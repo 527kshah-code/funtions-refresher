@@ -70,7 +70,29 @@ main {
 #btnClear:hover { background-color: #991b1b; }
 
 #btnAngry {
-  background-color: #b6350b;
-  border-color: #491e12;
+  background-color: #b45309;
+  border-color: #9a3412;
   color: white;
 }
+#btnAngry:hover { background-color: #9a3412; }
+
+#btnCycleText {
+  background-color: #15803d;
+  border-color: #166534;
+  color: #fff;
+}
+#btnCycleText:hover { background-color: #166534; }
+
+#btnRandomBg {
+  background-color: #d97706;
+  border-color: #b45309;
+  color: #fff;
+}
+#btnRandomBg:hover { background-color: #b45309; }
+
+#btnChangeTitle {
+  background-color: #78350f;
+  border-color: #451a03;
+  color: #fff;
+}
+#btnChangeTitle:hover { background-color: #451a03; }
