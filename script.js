@@ -132,17 +132,41 @@ document.getElementById('btnChangeTitle').addEventListener('click', changeTitle)
 */
 
 function changeTitle() {
-  document.title= "My New Page Title";
+  let newTitle = prompt("Enter a new title for the page:");
+  if (newTitle !== null && newTitle.trim() !== "") {
+        document.title = newTitle;
+    }
 }
+
+let colorIndex = 0;
+
+const textColors = ["red", "green", "orange", "blue", "purple"];
 
 function cycleTextColor() {
-  
-}
+    const output = document.getElementById("out");
 
-function randomBackgroundColor() {
+    output.style.color = textColors[colorIndex];
 
+    colorIndex = (colorIndex + 1) % textColors.length;
 }
 
 function angryMode() {
+    const output = document.getElementById("out");
 
+    output.textContent = "I'M ANGRY!!!";
+    output.style.color = "red";
+    output.style.backgroundColor = "black";
+    output.style.fontSize = "30px";
+    output.style.fontWeight = "bold";
+    output.style.textTransform = "uppercase";
+}
+
+function randomBackgroundColor() {
+    const output = document.getElementById("out");
+
+    const randomColor = "#" + Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, "0");
+
+    output.style.setProperty("background-color", randomColor, "important");
 }
